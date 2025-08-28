@@ -2,260 +2,290 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Hotline</title>
+<!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!--styles  -->
+  
+    
+    
+<!-- daisyUI -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
 </head>
-<body class="bg-base-200 p-5" >
-  <!-- Emergency Card -->
-  <div class="border-2 border "
-  <div class="card w-96 bg-base-100 shadow-sm  ">
-    <div class="card-body">
-      <!-- Top Row: Icon + Like -->
+<body class ="min-h-screen flex flex-col">
+<!-- navbar part -->
+
+    <nav class=" px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-2 ml-3">
+            <img src="assets/logo.png" alt="Emergency Service Logo" class="w-12 h-12 rounded-full"/>
+            <span class="font-extrabold text-lg text-[#006747]">Emergency <br>Service</span>
+        </div>
+        <div class="flex items-center gap-4 mr-7">
+            <div class="flex items-center gap-4">
+            <button id="heart-btn" class="focus:outline-none bg-[#41ff6b1a] rounded-full w-[100px] h-[35px] pl-2">
+                <span class="text-[#000000] text-l font-semibold">0 💗</span>
+            </button>
+
+            <div class="flex items-center gap-4">
+
+                <span id="coin-count" class="text-[#000000] text-l font-semibold bg-[#41ff6b1a] rounded-full w-[100px] h-[35px] pl-6 pt-1">100 🪙</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="bg-[#00A63E] px-2 py-1 rounded-full text-l font-semibold text-[#FFFFFF] w-[100px] h-[35px] pl-6">2 Copy</span>
+                
+            </div>
+        </div>
+    </nav>
+
+
+<!-- hero section part -->
+
+        <section class=" bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-white flex flex-col items-center justify-between min-h-[300px] px-6 py-8">
+        <img src="assets/logo-dark.png" alt="Emergency Service Logo" class="w-26 h-26 mb-4" />
+
+        <h1 class="text-[40px] font-bold text-center mb-2">Emergency Service Directory</h1>
+
+        <p class="text-center text-[17px] font-medium">Government Emergency Services at Your Fingertip - A Project by  Government of the People's Republic of Bangladesh</p>
+        </section>
+
+
+
+        
+        <!-- Main Area -->
+<main class="flex flex-grow gap-4 px-4 py-6 bg-gray-50 ">
+  <div class="flex-1">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-4">
+    <div class="bg-white rounded-lg p-4 shadow-md flex flex-col">
       <div class="flex items-center justify-between mb-3">
-        <div class="avatar placeholder">
-          <div class="bg-base-200 p-2 rounded-full">
-            <img src="./assets/emergency.png" alt="emergency" class="w-10 h-10" />
-          </div>
-        </div>
-        <button class="btn btn-circle btn-ghost">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-          </svg>
-        </button>
-      </div>
-      <!-- Card Title + Details -->
-      <h2 class="card-title text-lg font-semibold">National Emergency Number</h2>
-      <div class="text-sm text-base-content opacity-70 mb-1">National Emergency</div>
-      <p class="my-1 text-2xl font-bold tracking-wide">999</p>
-      <button class="btn btn-xs btn-ghost mb-2 w-16">All</button>
-      <!-- Card Actions -->
-      <div class="card-actions justify-end mt-2 space-x-2">
-        <button class="btn btn-outline btn-xs">Copy</button>
-        <button class="btn btn-success btn-xs text-blue">Call</button>
-      </div>
-    </div>
-  </div>
-  <div class="card w-96 bg-base-100 shadow-sm">
-    <div class="card-body">
-      <!-- Top Row: Icon + Like -->
-      <div class="flex items-center justify-between mb-3">
-        <div class="avatar placeholder">
-          <div class="bg-base-200 p-2 rounded-full">
-            <img src="./assets/emergency.png" alt="emergency" class="w-10 h-10" />
-          </div>
-        </div>
-        <button class="btn btn-circle btn-ghost">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-          </svg>
-        </button>
-      </div>
-      <!-- Card Title + Details -->
-      <h2 class="card-title text-lg font-semibold">Police Helpline Number</h2>
-      <div class="text-sm text-base-content opacity-70 mb-1">Police</div>
-      <p class="my-1 text-2xl font-bold tracking-wide">999</p>
-      <button class="btn btn-xs btn-ghost mb-2 w-16">Police</button>
-      <!-- Card Actions -->
-      <div class="card-actions justify-end mt-2 space-x-2">
-        <button class="btn btn-outline btn-xs">Copy</button>
-        <button class="btn btn-success btn-xs text-blue">Call</button>
-      </div>
-    </div>
-  </div>
-  <div class="card w-96 bg-base-100 shadow-sm">
-    <div class="card-body">
-      <!-- Top Row: Icon + Like -->
-      <div class="flex items-center justify-between mb-3">
-        <div class="avatar placeholder">
-          <div class="bg-base-200 p-2 rounded-full">
-            <img src="./assets/police.png" alt="emergency" class="w-10 h-10" />
-          </div>
-        </div>
-        <button class="btn btn-circle btn-ghost">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-          </svg>
-        </button>
-      </div>
-      <!-- Card Title + Details -->
-      <h2 class="card-title text-lg font-semibold">Fire Service Number</h2>
-      <div class="text-sm text-base-content opacity-70 mb-1">Fire Service</div>
-      <p class="my-1 text-2xl font-bold tracking-wide">999</p>
-      <button class="btn btn-xs btn-ghost mb-2 w-16">Fire</button>
-      <!-- Card Actions -->
-      <div class="card-actions justify-end mt-2 space-x-2">
-        <button class="btn btn-outline btn-xs">Copy</button>
-        <button class="btn btn-success btn-xs text-blue">Call</button>
-      </div>
-    </div>
-    <div class="card w-96 bg-base-100 shadow-sm">
-        <div class="card-body">
-          <!-- Top Row: Icon + Like -->
-          <div class="flex items-center justify-between mb-3">
-            <div class="avatar placeholder">
-              <div class="bg-base-200 p-2 rounded-full">
-                <img src="./assets/fire-service.png" alt="emergency" class="w-10 h-10" />
-              </div>
-            </div>
-            <button class="btn btn-circle btn-ghost">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-              </svg>
-            </button>
-          </div>
-          <!-- Card Title + Details -->
-          <h2 class="card-title text-lg font-semibold">Ambulence Service Number</h2>
-          <div class="text-sm text-base-content opacity-70 mb-1">Ambulence</div>
-          <p class="my-1 text-2xl font-bold tracking-wide">016-7589917</p>
-          <button class="btn btn-xs btn-ghost mb-2 w-16">Health</button>
-          <!-- Card Actions -->
-          <div class="card-actions justify-end mt-2 space-x-2">
-            <button class="btn btn-outline btn-xs">Copy</button>
-            <button class="btn btn-success btn-xs text-blue">Call</button>
-          </div>
-        </div>
-      </div>
-      <div class="card w-96 bg-base-100 shadow-sm">
-        <div class="card-body">
-          <!-- Top Row: Icon + Like -->
-          <div class="flex items-center justify-between mb-3">
-            <div class="avatar placeholder">
-              <div class="bg-base-200 p-2 rounded-full">
-                <img src="./assets/ambulance.png" alt="emergency" class="w-10 h-10" />
-              </div>
-            </div>
-            <button class="btn btn-circle btn-ghost">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-              </svg>
-            </button>
-          </div>
-          <!-- Card Title + Details -->
-          <h2 class="card-title text-lg font-semibold">Women And Child Helpline</h2>
-          <div class="text-sm text-base-content opacity-70 mb-1">Women and child</div>
-          <p class="my-1 text-2xl font-bold tracking-wide">109</p>
-          <button class="btn btn-xs btn-ghost mb-2 w-16">help</button>
-          <!-- Card Actions -->
-          <div class="card-actions justify-end mt-2 space-x-2">
-            <button class="btn btn-outline btn-xs">Copy</button>
-            <button class="btn btn-success btn-xs text-blue">Call</button>
-          </div>
-        </div>
-      </div>
-      <div class="card w-96 bg-base-100 shadow-sm">
-        <div class="card-body">
-          <!-- Top Row: Icon + Like -->
-          <div class="flex items-center justify-between mb-3">
-            <div class="avatar placeholder">
-              <div class="bg-base-200 p-2 rounded-full">
-                <img src="./assets/emergency.png" alt="emergency" class="w-10 h-10" />
-              </div>
-            </div>
-            <button class="btn btn-circle btn-ghost">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-              </svg>
-            </button>
-          </div>
-          <!-- Card Title + Details -->
-          <h2 class="card-title text-lg font-semibold">Anti Corruption Helpline</h2>
-          <div class="text-sm text-base-content opacity-70 mb-1">Anti-corruption</div>
-          <p class="my-1 text-2xl font-bold tracking-wide">890</p>
-          <button class="btn btn-xs btn-ghost mb-2 w-16">Govt</button>
-          <!-- Card Actions -->
-          <div class="card-actions justify-end mt-2 space-x-2">
-            <button class="btn btn-outline btn-xs">Copy</button>
-            <button class="btn btn-success btn-xs text-blue">Call</button>
-          </div>
-        </div>
-      </div>
-      <div class="card w-96 bg-base-100 shadow-sm">
-        <div class="card-body">
-          <!-- Top Row: Icon + Like -->
-          <div class="flex items-center justify-between mb-3">
-            <div class="avatar placeholder">
-              <div class="bg-base-200 p-2 rounded-full">
-                <img src="./assets/emergency.png" alt="emergency" class="w-10 h-10" />
-              </div>
-            </div>
-            <button class="btn btn-circle btn-ghost">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-              </svg>
-            </button>
-          </div>
-          <!-- Card Title + Details -->
-          <h2 class="card-title text-lg font-semibold">Electricity Helpline Number</h2>
-          <div class="text-sm text-base-content opacity-70 mb-1">Electricity helpline</div>
-          <p class="my-1 text-2xl font-bold tracking-wide">999</p>
-          <button class="btn btn-xs btn-ghost mb-2 w-16">Electricity</button>
-          <!-- Card Actions -->
-          <div class="card-actions justify-end mt-2 space-x-2">
-            <button class="btn btn-outline btn-xs">Copy</button>
-            <button class="btn btn-success btn-xs text-blue">Call</button>
-          </div>
-        </div>
-      </div>
-      <div class="card w-96 bg-base-100 shadow-sm">
-        <div class="card-body">
-          <!-- Top Row: Icon + Like -->
-          <div class="flex items-center justify-between mb-3">
-            <div class="avatar placeholder">
-              <div class="bg-base-200 p-2 rounded-full">
-                <img src="./assets/emergency.png" alt="emergency" class="w-10 h-10" />
-              </div>
-            </div>
-            <button class="btn btn-circle btn-ghost">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-              </svg>
-            </button>
-          </div>
-          <!-- Card Title + Details -->
-          <h2 class="card-title text-lg font-semibold">Brac Helpline  Number</h2>
-          <div class="text-sm text-base-content opacity-70 mb-1">Brac</div>
-          <p class="my-1 text-2xl font-bold tracking-wide">999</p>
-          <button class="btn btn-xs btn-ghost mb-2 w-16">NGO</button>
-          <!-- Card Actions -->
-          <div class="card-actions justify-end mt-2 space-x-2">
-            <button class="btn btn-outline btn-xs">Copy</button>
-            <button class="btn btn-success btn-xs text-blue">Call</button>
-          </div>
-        </div>
-      </div>
-      <div class="card w-96 bg-base-100 shadow-sm">
-        <div class="card-body">
-          <!-- Top Row: Icon + Like -->
-          <div class="flex items-center justify-between mb-3">
-            <div class="avatar placeholder">
-              <div class="bg-base-200 p-2 rounded-full">
-                <img src="./assets/emergency.png" alt="emergency" class="w-10 h-10" />
-              </div>
-            </div>
-            <button class="btn btn-circle btn-ghost">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-              </svg>
-            </button>
-          </div>
-          <!-- Card Title + Details -->
-          <h2 class="card-title text-lg font-semibold">Bangladesh Railway helpline Number</h2>
-          <div class="text-sm text-base-content opacity-70 mb-1">Bangladesh Railway</div>
-          <p class="my-1 text-2xl font-bold tracking-wide">999</p>
-          <button class="btn btn-xs btn-ghost mb-2 w-16">Travel</button>
-          <!-- Card Actions -->
-          <div class="card-actions justify-end mt-2 space-x-2">
-            <button class="btn btn-outline btn-xs">Copy</button>
-            <button class="btn btn-success btn-xs text-blue">Call</button>
-          </div>
-        </div>
+        <div class="text-green-600 text-3xl">🚨</div>
+
+        <button class="text-pink-500 text-xl focus:outline-none" aria-label="Like service">💗</button>
       </div>
 
-  </div>
-</body>
-</html>
+      <h3 class="font-bold text-lg">জাতীয় জরুরি নম্বর</h3>
+      <p class="text-gray-600 mb-1">National Emergency Number</p>
 
+      <p class="font-semibold text-xl mb-1">999</p>
+
+      <span class="inline-block bg-green-200 text-green-800 text-xs px-2 py-1 rounded font-medium mb-4">All</span>
+
+      <div class="flex gap-4 mt-auto">
+        <button class="flex-1 bg-gray-100 text-gray-700 py-2 rounded flex items-center justify-center gap-2 hover:bg-gray-200 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16h8M8 12h8M8 8h8M4 4h16v16H4z"></path></svg>
+          Copy
+        </button>
+
+        <button class="flex-1 bg-green-600 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-green-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l7-7m0 0l7 7m-7-7v14"></path></svg>
+          Call
+        </button>
+      </div>
+    </div>
+
+
+
+    <!-- Example second card (Police helpline) -->
+    <div class="bg-white rounded-lg p-4 shadow-md flex flex-col">
+      <div class="flex items-center justify-between mb-3">
+        <div class="text-blue-600 text-3xl">👮‍♂️</div>
+        <button class="text-pink-500 text-xl focus:outline-none">💗</button>
+      </div>
+      <h3 class="font-bold text-lg">পুলিশ হেল্পলাইন</h3>
+      <p class="text-gray-600 mb-1">Police Helpline Number</p>
+      <p class="font-semibold text-xl mb-1">999</p>
+      <span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded font-medium mb-4">Police</span>
+      <div class="flex gap-4 mt-auto">
+        <button class="flex-1 bg-gray-100 text-gray-700 py-2 rounded flex items-center justify-center gap-2 hover:bg-gray-200 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16h8M8 12h8M8 8h8M4 4h16v16H4z"></path></svg>
+          Copy
+        </button>
+        <button class="flex-1 bg-green-600 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-green-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l7-7m0 0l7 7m-7-7v14"></path></svg>
+          Call
+        </button>
+      </div>
+    </div>
+    <div class="bg-white rounded-lg p-4 shadow-md flex flex-col">
+      <div class="flex items-center justify-between mb-3">
+        <div class="text-blue-600 text-3xl">👮‍♂️</div>
+        <button class="text-pink-500 text-xl focus:outline-none">💗</button>
+      </div>
+      <h3 class="font-bold text-lg">পুলিশ হেল্পলাইন</h3>
+      <p class="text-gray-600 mb-1">Police Helpline Number</p>
+      <p class="font-semibold text-xl mb-1">999</p>
+      <span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded font-medium mb-4">Police</span>
+      <div class="flex gap-4 mt-auto">
+        <button class="flex-1 bg-gray-100 text-gray-700 py-2 rounded flex items-center justify-center gap-2 hover:bg-gray-200 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16h8M8 12h8M8 8h8M4 4h16v16H4z"></path></svg>
+          Copy
+        </button>
+        <button class="flex-1 bg-green-600 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-green-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l7-7m0 0l7 7m-7-7v14"></path></svg>
+          Call
+        </button>
+      </div>
+    </div>
+    <div class="bg-white rounded-lg p-4 shadow-md flex flex-col">
+      <div class="flex items-center justify-between mb-3">
+        <div class="text-blue-600 text-3xl">👮‍♂️</div>
+        <button class="text-pink-500 text-xl focus:outline-none">💗</button>
+      </div>
+      <h3 class="font-bold text-lg">পুলিশ হেল্পলাইন</h3>
+      <p class="text-gray-600 mb-1">Police Helpline Number</p>
+      <p class="font-semibold text-xl mb-1">999</p>
+      <span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded font-medium mb-4">Police</span>
+      <div class="flex gap-4 mt-auto">
+        <button class="flex-1 bg-gray-100 text-gray-700 py-2 rounded flex items-center justify-center gap-2 hover:bg-gray-200 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16h8M8 12h8M8 8h8M4 4h16v16H4z"></path></svg>
+          Copy
+        </button>
+        <button class="flex-1 bg-green-600 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-green-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l7-7m0 0l7 7m-7-7v14"></path></svg>
+          Call
+        </button>
+      </div>
+    </div>
+    <div class="bg-white rounded-lg p-4 shadow-md flex flex-col">
+      <div class="flex items-center justify-between mb-3">
+        <div class="text-blue-600 text-3xl">👮‍♂️</div>
+        <button class="text-pink-500 text-xl focus:outline-none">💗</button>
+      </div>
+      <h3 class="font-bold text-lg">পুলিশ হেল্পলাইন</h3>
+      <p class="text-gray-600 mb-1">Police Helpline Number</p>
+      <p class="font-semibold text-xl mb-1">999</p>
+      <span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded font-medium mb-4">Police</span>
+      <div class="flex gap-4 mt-auto">
+        <button class="flex-1 bg-gray-100 text-gray-700 py-2 rounded flex items-center justify-center gap-2 hover:bg-gray-200 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16h8M8 12h8M8 8h8M4 4h16v16H4z"></path></svg>
+          Copy
+        </button>
+        <button class="flex-1 bg-green-600 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-green-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l7-7m0 0l7 7m-7-7v14"></path></svg>
+          Call
+        </button>
+      </div>
+    </div>
+    <div class="bg-white rounded-lg p-4 shadow-md flex flex-col">
+      <div class="flex items-center justify-between mb-3">
+        <div class="text-blue-600 text-3xl">👮‍♂️</div>
+        <button class="text-pink-500 text-xl focus:outline-none">💗</button>
+      </div>
+      <h3 class="font-bold text-lg">পুলিশ হেল্পলাইন</h3>
+      <p class="text-gray-600 mb-1">Police Helpline Number</p>
+      <p class="font-semibold text-xl mb-1">999</p>
+      <span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded font-medium mb-4">Police</span>
+      <div class="flex gap-4 mt-auto">
+        <button class="flex-1 bg-gray-100 text-gray-700 py-2 rounded flex items-center justify-center gap-2 hover:bg-gray-200 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16h8M8 12h8M8 8h8M4 4h16v16H4z"></path></svg>
+          Copy
+        </button>
+        <button class="flex-1 bg-green-600 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-green-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l7-7m0 0l7 7m-7-7v14"></path></svg>
+          Call
+        </button>
+      </div>
+    </div>
+    <div class="bg-white rounded-lg p-4 shadow-md flex flex-col">
+      <div class="flex items-center justify-between mb-3">
+        <div class="text-blue-600 text-3xl">👮‍♂️</div>
+        <button class="text-pink-500 text-xl focus:outline-none">💗</button>
+      </div>
+      <h3 class="font-bold text-lg">পুলিশ হেল্পলাইন</h3>
+      <p class="text-gray-600 mb-1">Police Helpline Number</p>
+      <p class="font-semibold text-xl mb-1">999</p>
+      <span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded font-medium mb-4">Police</span>
+      <div class="flex gap-4 mt-auto">
+        <button class="flex-1 bg-gray-100 text-gray-700 py-2 rounded flex items-center justify-center gap-2 hover:bg-gray-200 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16h8M8 12h8M8 8h8M4 4h16v16H4z"></path></svg>
+          Copy
+        </button>
+        <button class="flex-1 bg-green-600 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-green-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l7-7m0 0l7 7m-7-7v14"></path></svg>
+          Call
+        </button>
+      </div>
+    </div>
+    <div class="bg-white rounded-lg p-4 shadow-md flex flex-col">
+      <div class="flex items-center justify-between mb-3">
+        <div class="text-blue-600 text-3xl">👮‍♂️</div>
+        <button class="text-pink-500 text-xl focus:outline-none">💗</button>
+      </div>
+      <h3 class="font-bold text-lg">পুলিশ হেল্পলাইন</h3>
+      <p class="text-gray-600 mb-1">Police Helpline Number</p>
+      <p class="font-semibold text-xl mb-1">999</p>
+      <span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded font-medium mb-4">Police</span>
+      <div class="flex gap-4 mt-auto">
+        <button class="flex-1 bg-gray-100 text-gray-700 py-2 rounded flex items-center justify-center gap-2 hover:bg-gray-200 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16h8M8 12h8M8 8h8M4 4h16v16H4z"></path></svg>
+          Copy
+        </button>
+        <button class="flex-1 bg-green-600 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-green-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l7-7m0 0l7 7m-7-7v14"></path></svg>
+          Call
+        </button>
+      </div>
+    </div>
+    <div class="bg-white rounded-lg p-4 shadow-md flex flex-col">
+      <div class="flex items-center justify-between mb-3">
+        <div class="text-blue-600 text-3xl">👮‍♂️</div>
+        <button class="text-pink-500 text-xl focus:outline-none">💗</button>
+      </div>
+      <h3 class="font-bold text-lg">পুলিশ হেল্পলাইন</h3>
+      <p class="text-gray-600 mb-1">Police Helpline Number</p>
+      <p class="font-semibold text-xl mb-1">999</p>
+      <span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded font-medium mb-4">Police</span>
+      <div class="flex gap-4 mt-auto">
+        <button class="flex-1 bg-gray-100 text-gray-700 py-2 rounded flex items-center justify-center gap-2 hover:bg-gray-200 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16h8M8 12h8M8 8h8M4 4h16v16H4z"></path></svg>
+          Copy
+        </button>
+        <button class="flex-1 bg-green-600 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-green-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l7-7m0 0l7 7m-7-7v14"></path></svg>
+          Call
+        </button>
+      </div>
+    </div>
+
+    <!-- Add more cards similarly ... -->
+
+  </div>
+</div>
+  <!-- Call History Section -->
+  <section class="bg-white rounded-lg shadow-md w-80 flex flex-col h-full">
+    <div class="flex justify-between items-center mb-3">
+      <div class="flex items-center gap-2 font-semibold text-gray-700 text-lg">
+        <!-- History icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Call History
+      </div>
+      <button id="clear-history-btn" class="text-sm bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 focus:outline-none">
+        Clear
+      </button>
+    </div>
+
+    <!-- Calls will dynamically display here -->
+    <ul id="call-history-list" class="space-y-2 text-gray-700 text-sm">
+      <!-- Example empty message -->
+      <li class="text-center italic text-gray-400">No calls made yet.</li>
+    </ul>
+  </section>
+</main>
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
